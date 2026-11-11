@@ -1,13 +1,13 @@
 @extends('web._layouts.main')
 
 @section('content')
-<main class="flex-fill d-flex align-items-center justify-content-center">
-    <div class="container text-center py-5">
-        <h1 class="display-4 fw-bold mb-3 text-dark">Welcome to Your Laravel 12 Application</h1>
-        <p class="lead text-secondary mb-4">
+<main class="flex-fill d-flex align-items-center justify-content-center h-100">
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Article Management</h1>
+        <p class="lead mb-4">
             You're running Laravel 12 with a custom structure and modern tooling.
         </p>
-        <div class="d-flex justify-content-center gap-2">
+        <div class="d-flex gap-2">
             <a href="https://laravel.com/docs/12.x" target="_blank" class="btn btn-primary btn-lg">
                 Documentation
             </a>
@@ -25,12 +25,7 @@
 @section('page-styles')
 <style>
     body {
-        background: black;
-    }
-
-    h1,
-    p {
-        color: red;
+        background: #FAFAFA;
     }
 </style>
 @endsection

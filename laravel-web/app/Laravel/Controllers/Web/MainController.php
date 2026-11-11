@@ -19,4 +19,22 @@ class MainController extends Controller
         $this->data['page-title'] = 'About Page';
         return view('web.about', $this->data);
     }
+
+    public function contact(PageRequest $request)
+    {
+        $this->data['page-title'] = 'Contact Page';
+        return view('web.contact', $this->data);
+    }
+
+    public function articles(PageRequest $request)
+    {
+        $this->data['page-title'] = 'Articles Page';
+        return view('web.articles', $this->data);
+    }
+
+    public function article(PageRequest $request)
+    {
+        $this->data['page-title'] = 'Article Page';
+        return view('web.article', $this->data);
+    }
 }

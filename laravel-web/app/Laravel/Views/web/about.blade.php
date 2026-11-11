@@ -3,7 +3,7 @@
 @section('content')
 <main class="flex-fill d-flex align-items-center justify-content-center">
     <div class="container text-center py-5">
-        <h1 class="display-4 fw-bold mb-3 text-dark">Welcome to About Page</h1>
+        <h1 class="display-4 fw-bold mb-3">About Us</h1>
         <p class="lead text-secondary mb-4">
             You're running Laravel 12 with a custom structure and modern tooling.
         </p>
@@ -13,6 +13,12 @@
             </a>
             <a href="{{ route('web.home') }}" class="btn btn-outline-secondary btn-lg">
                 Go back to home
+            </a>
+            <a href="{{ route('web.contact') }}" class="btn btn-outline-secondary btn-lg">
+                Go to contacts
+            </a>
+            <a href="{{ route('web.articles') }}" class="btn btn-outline-secondary btn-lg">
+                Go to articles
             </a>
         </div>
     </div>
@@ -25,7 +31,12 @@
 @section('page-styles')
 <style>
     body {
-        background: red;
+        background: black;
+    }
+
+    h1,
+    p {
+        color: white;
     }
 </style>
 @endsection
