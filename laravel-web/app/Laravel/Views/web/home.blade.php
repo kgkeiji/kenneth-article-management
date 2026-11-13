@@ -3,7 +3,7 @@
 @section('content')
 <main class="d-flex flex-column">
     <!-- row 1 hero section -->
-    <div class="row row-align gy-4 pb-5 align-items-center justify-content-center">
+    <div class="row row-align gy-4 py-5 align-items-center justify-content-center">
         <!-- first col -->
         <div class="col-md-6 py-5">
             <h1 class="display-4 fw-bold mb-3">Article Management</h1>
@@ -12,17 +12,37 @@
             </p>
             <div class="d-flex gap-2">
                 <a href="{{ route('web.about') }}" class="btn btn-primary btn-lg">
-                    About page
+                    See More
                 </a>
             </div>
         </div>
         <!-- second col -->
         <div class="col-md-6 text-center">
-            <img src="{{ 'assets/images/article management image.png' }}" alt="Article Management" class="img-fluid">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{'assets/images/diorama.png'}}" class="img-fluid d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{'assets/images/background 1.jpg'}}" class="img-fluid d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{'assets/images/about.jpg'}}" class="img-fluid d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
     <!-- row 2 cards -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 pt-5 text-center">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 py-5 text-center">
         <div class="col">
             <div class="card h-100 d-flex flex-column justify-content-center align-items-center py-5">
                 <img src="{{ 'assets/icons/1 content creation.png' }}" class="card-img-top w-50 h-auto opacity-75" alt="Content Creation">
@@ -62,15 +82,44 @@
     </div>
 
 </main>
-<footer class="text-center text-muted py-3 mt-auto">
-    &copy; {{ date('Y') }} Laravel 12 Starter. Built with ❤️.
-</footer>
 @endsection
 
 @section('page-styles')
 <style>
     body {
         background: #FAFAFA;
+    }
+
+    #hero-img {
+        transition: all 0.3s ease;
+    }
+
+    #hero-img:hover {
+        transform: scale(1.01);
+    }
+
+    @media (max-width: 425px) {
+
+        .carousel-item img {
+            height: 320px;
+        }
+    }
+
+    @media (min-width: 1440px) {
+
+        .carousel-item img {
+            height: 520px;
+        }
+    }
+
+    .card {
+        transition: all 0.3s ease;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .card:hover {
+        transform: translateY(-5px) !important;
     }
 </style>
 @endsection

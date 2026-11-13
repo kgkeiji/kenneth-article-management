@@ -1,4 +1,10 @@
 <style>
+    body {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 100vh !important;
+    }
+
     .active {
         color: blue !important;
     }
@@ -11,11 +17,6 @@
 
     .nav-link:hover {
         background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:hover {
-        color: black !important;
-        text-decoration: underline;
     }
 
     @media (min-width: 992px) {

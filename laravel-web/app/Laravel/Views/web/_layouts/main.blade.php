@@ -11,13 +11,12 @@
     @include('web._components.topbar')
 
     <div class="container">
-        <div class="row">
-            <div class="col">
-                @yield('content')
-            </div>
-        </div>
+        @yield('content')
     </div>
 
+    </div>
+
+    @include('web._components.footer')
     @include('web._components.scripts')
     @yield('page-scripts')
 </body>

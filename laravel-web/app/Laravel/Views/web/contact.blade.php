@@ -10,20 +10,20 @@
         <div class="container">
             <!-- row -->
             <form class="row d-flex">
-                <!-- col -->
-                <div class="col">
+                <!-- col name and email-->
+                <div class="col-12 col-md-6">
                     <div class="mb-4">
-                        <label for="exampleInputPassword1" class="form-label">Name</label>
-                        <input type="text" class="form-control">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
                     </div>
                     <div class="mb-4">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                     </div>
 
                 </div>
-                <!-- col -->
-                <div class="col">
+                <!-- col message -->
+                <div class="col-12 col-md-6">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Message</label>
                         <textarea class="form-control" rows="5"></textarea>
@@ -35,9 +35,6 @@
         </div>
     </div>
 </main>
-<footer class="text-center text-muted py-3 mt-auto">
-    &copy; {{ date('Y') }} Laravel 12 Starter. Built with ❤️.
-</footer>
 @endsection
 
 @section('page-styles')
