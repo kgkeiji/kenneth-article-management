@@ -36,18 +36,8 @@
 
 @section('page-styles')
 <style>
-    body {
-        --bs-bg-opacity: 1;
-        background: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-    }
-
-    a {
-        color: white !important;
-    }
-
     h1,
     p {
-        color: white;
         text-align: justify;
     }
 

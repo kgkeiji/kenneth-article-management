@@ -4,7 +4,7 @@
 <main class="flex-fill d-flex align-items-center justify-content-center">
     <div class="container py-5">
         <h1 class="display-4 fw-bold mb-3 text-center">Articles</h1>
-        <p class="lead text-secondary mb-4 text-center">
+        <p class="lead text-primary mb-4 text-center">
             You're running Laravel 12 with a custom structure and modern tooling.
         </p>
         <div class="list-group gap-2">
@@ -78,7 +78,6 @@
     body {
         background: #FAFAFA;
     }
-
 
     @media (min-width: 768px) {
         img {

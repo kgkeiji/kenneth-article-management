@@ -14,6 +14,9 @@
                 <a href="{{ route('web.about') }}" class="btn btn-primary btn-lg">
                     See More
                 </a>
+                <a href="{{ route('web.articles') }}" class="btn btn-secondary btn-lg">
+                    Know More
+                </a>
             </div>
         </div>
         <!-- second col -->
@@ -98,6 +101,16 @@
         transform: scale(1.01);
     }
 
+    .card {
+        transition: all 0.3s ease;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .card:hover {
+        transform: translateY(-5px) !important;
+    }
+
     @media (max-width: 425px) {
 
         .carousel-item img {
@@ -110,16 +123,6 @@
         .carousel-item img {
             height: 520px;
         }
-    }
-
-    .card {
-        transition: all 0.3s ease;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-
-    }
-
-    .card:hover {
-        transform: translateY(-5px) !important;
     }
 </style>
 @endsection
