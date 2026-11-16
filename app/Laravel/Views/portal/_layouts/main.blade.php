@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    @include('web._components.metas')
-    @include('web._components.styles')
+    @include('portal._components.metas')
+    @include('portal._components.styles')
     @yield('page-styles')
 </head>
 
 <body>
-    @include('web._components.topbar')
+    @include('portal._components.sidebar')
 
     <div class="container">
         @yield('content')
@@ -16,8 +16,8 @@
 
     </div>
 
-    @include('web._components.footer')
-    @include('web._components.scripts')
+    @include('portal._components.footer')
+    @include('portal._components.scripts')
     @yield('page-scripts')
 </body>
 

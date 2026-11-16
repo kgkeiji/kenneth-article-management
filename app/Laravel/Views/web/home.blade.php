@@ -14,7 +14,7 @@
                 <a href="{{ route('web.about') }}" class="btn btn-primary btn-lg">
                     See More
                 </a>
-                <a href="{{ route('web.articles') }}" class="btn btn-secondary btn-lg">
+                <a href="{{ route('portal.about') }}" class="btn btn-secondary btn-lg">
                     Know More
                 </a>
             </div>
