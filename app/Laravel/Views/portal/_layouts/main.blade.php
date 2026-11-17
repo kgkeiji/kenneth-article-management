@@ -7,16 +7,17 @@
     @yield('page-styles')
 </head>
 
-<body>
-    @include('portal._components.sidebar')
+<body class="bg-body-tertiary d-flex flex-column min-vh-100">
+    @include('portal._components.topbar')
 
-    <div class="container">
-        @yield('content')
+    <div class="d-flex flex-grow-1">
+        @include('portal._components.sidebar')
+        <div class="flex-grow-1 d-flex flex-column" style="min-width:0">
+            @yield('content')
+            @include('portal._components.footer')
+        </div>
     </div>
 
-    </div>
-
-    @include('portal._components.footer')
     @include('portal._components.scripts')
     @yield('page-scripts')
 </body>

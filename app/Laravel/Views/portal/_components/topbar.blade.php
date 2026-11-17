@@ -1,32 +1,22 @@
-<nav class="navbar navbar-expand-lg bg-transparent">
-    <div class="container-fluid position-relative">
-        <a class="navbar-brand fst-italic" href="{{route('portal.login')}}">TheArticle</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+<nav class="navbar sticky-top bg-white shadow-sm px-3">
+    <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-link text-secondary p-0" data-bs-toggle="collapse" data-bs-target="#sidebar"
+            aria-label="Toggle sidebar">
+            <i class="bi bi-list fs-5"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mb-2 mb-lg-0 position-lg-absolute start-50 translate-middle-x-lg">
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('portal.home') ? 'active' : '' }}"
-                        @if(request()->routeIs('portal.home')) aria-current="page" @endif
-                        href="{{route('portal.home')}}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('portal.about') ? 'active' : '' }}"
-                        @if(request()->routeIs('portal.about')) aria-current="page" @endif
-                        href="{{route('portal.about')}}">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('web.articles') ? 'active' : '' }}"
-                        @if(request()->routeIs('web.articles')) aria-current="page" @endif
-                        href="{{route('web.articles')}}">Articles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('web.contact') ? 'active' : '' }}"
-                        @if(request()->routeIs('web.contact')) aria-current="page" @endif
-                        href="{{route('web.contact')}}">Contact</a>
-                </li>
-            </ul>
+        <a class="navbar-brand" href="#">
+            TheArticle CMS
+        </a>
+        <div class="input-group d-none d-md-flex" style="width:210px">
+            <input type="search" class="form-control bg-body-tertiary border-0" placeholder="Search">
+            <span class="input-group-text bg-body-tertiary border-0"><i class="bi bi-search"></i></span>
         </div>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+        <a href="#" class="link-secondary text-decoration-none d-none d-md-inline">Documentation <i
+                class="bi bi-chevron-right small"></i></a>
+        <i class="bi bi-bell text-secondary"></i>
+        <i class="bi bi-envelope text-secondary"></i>
+        <i class="bi bi-person-circle text-primary fs-2"></i>
     </div>
 </nav>

@@ -10,9 +10,10 @@ Route::group([
     'prefix' => "portal",
     'middleware' => ["web"]
 ], function () {
-    Route::get('/', ['as' => 'home', 'uses' => 'MainController@index']);;
+    Route::get('/', ['as' => 'dashboard', 'uses' => 'MainController@index']);;
+    Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);;
     Route::get('login', ['as' => 'login', 'uses' => 'MainController@login']);;
     Route::get('register', ['as' => 'register', 'uses' => 'MainController@register']);;
-    Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'MainController@dashboard']);;
     Route::get('about', ['as' => 'about', 'uses' => 'MainController@about']);;
+    Route::get('contact', ['as' => 'contact', 'uses' => 'MainController@contact']);;
 });
