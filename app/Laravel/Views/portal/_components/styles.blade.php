@@ -1,31 +1,21 @@
 <style>
-    body {
-        display: flex !important;
-        flex-direction: column !important;
-        min-height: 100vh !important;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .active {
-        color: blue !important;
+    aside {
+        width: 225px;
     }
 
-    .nav-link,
-    .btn {
-        border-radius: 4px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+    #sidebarMobile {
+        --bs-offcanvas-width: 225px;
     }
 
-    .nav-link:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-
-    @media (min-width: 992px) {
-        .position-lg-absolute {
-            position: absolute !important;
-        }
-
-        .translate-middle-x-lg {
-            transform: translateX(-50%) !important;
+    @media (max-width: 767.98px) {
+        #sidebar {
+            display: none !important;
         }
     }
 </style>

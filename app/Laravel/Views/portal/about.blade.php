@@ -1,9 +1,9 @@
-@extends('web._layouts.main')
+@extends('portal._layouts.main')
 
 @section('content')
 <main class="flex-fill d-flex align-items-center justify-content-center">
     <div class="container py-5">
-        <h1 class="display-4 fw-bold mb-3">About Us</h1>
+        <h1 class="display-4 fw-bold mb-3">Portal - About Us</h1>
         <p class="lead mb-4">
             You're running Laravel 12 with a custom structure and modern tooling.
         </p>
@@ -11,7 +11,7 @@
             <p>We are a team of passionate developers dedicated to creating amazing web applications with Laravel.</p>
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img src="{{'assets/images/about.jpg'}}" class="w-100" alt="About Image">
+                    <img src="{{'../assets/images/about.jpg'}}" class="w-100" alt="About Image">
                 </div>
             </div>
             <p>
@@ -20,7 +20,7 @@
             </p>
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6 d-flex justify-content-center">
-                    <img src="{{'assets/images/diorama.png'}}" class="w-100" alt="About Image">
+                    <img src="{{ asset('assets/images/about.jpg') }}" class="w-100" alt="Peepo Image">
                 </div>
             </div>
             <p>

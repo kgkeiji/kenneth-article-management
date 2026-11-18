@@ -40,6 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+
         'api' => [
             'driver' => 'jwt',
             'provider' => 'users',
@@ -68,6 +74,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', \App\Laravel\Models\User::class),
+        ],
+
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => \App\Laravel\Models\Admin::class,
         ],
 
         // 'users' => [

@@ -3,14 +3,13 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+
 class MiddlewareServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register(): void
-    {
-    }
+    public function register(): void {}
 
     /**
      * Bootstrap any application services.
@@ -20,6 +19,9 @@ class MiddlewareServiceProvider extends ServiceProvider
         $router = $this->app['router'];
         $router->aliasMiddleware('api.auth', \App\Laravel\Middlewares\Api\Authenticate::class);
         $router->aliasMiddleware('api.exist', \App\Laravel\Middlewares\Api\ExistRecord::class);
+
+        $router->aliasMiddleware('portal.auth', \App\Laravel\Middlewares\Portal\Authenticate::class);
+        $router->aliasMiddleware('portal.guest', \App\Laravel\Middlewares\Portal\RedirectIfAuthenticated::class);
 
         $router->aliasMiddleware('web.auth', \App\Laravel\Middlewares\Web\Authenticate::class);
         $router->aliasMiddleware('web.guest', \App\Laravel\Middlewares\Web\RedirectIfAuthenticated::class);

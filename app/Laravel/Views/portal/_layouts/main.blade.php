@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    @include('web._components.metas')
-    @include('web._components.styles')
+    @include('portal._components.metas')
+    @include('portal._components.styles')
     @yield('page-styles')
 </head>
 
-<body>
-    @include('web._components.topbar')
+<body class="bg-body-tertiary d-flex flex-column min-vh-100">
+    @include('portal._components.topbar')
+    @include('portal._components.notifications')
 
-    <div class="container">
-        @yield('content')
+    <div class="d-flex flex-grow-1">
+        @include('portal._components.sidebar')
+        <div class="flex-grow-1 d-flex flex-column" style="min-width:0">
+            @yield('content')
+            @include('portal._components.footer')
+        </div>
     </div>
 
-    </div>
-
-    @include('web._components.footer')
-    @include('web._components.scripts')
+    @include('portal._components.scripts')
     @yield('page-scripts')
 </body>
 
