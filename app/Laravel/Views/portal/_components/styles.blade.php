@@ -4,4 +4,18 @@
         margin: 0;
         padding: 0;
     }
+
+    aside {
+        width: 225px;
+    }
+
+    #sidebarMobile {
+        --bs-offcanvas-width: 225px;
+    }
+
+    @media (max-width: 767.98px) {
+        #sidebar {
+            display: none !important;
+        }
+    }
 </style>

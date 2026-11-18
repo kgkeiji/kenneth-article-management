@@ -13,10 +13,10 @@
                         You're running Laravel 12 with a custom structure and modern tooling.
                     </p>
                     <div class="d-flex gap-2">
-                        <a href="{{ route('web.about') }}" class="btn btn-primary btn-lg">
+                        <a href="#" class="btn btn-primary btn-lg">
                             See More
                         </a>
-                        <a href="{{ route('portal.about') }}" class="btn btn-secondary btn-lg">
+                        <a href="#" class="btn btn-secondary btn-lg">
                             Know More
                         </a>
                     </div>

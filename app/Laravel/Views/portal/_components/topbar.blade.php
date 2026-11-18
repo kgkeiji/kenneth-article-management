@@ -1,7 +1,11 @@
 <nav class="navbar sticky-top bg-white shadow-sm px-3">
     <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-link text-secondary p-0" data-bs-toggle="collapse" data-bs-target="#sidebar"
-            aria-label="Toggle sidebar">
+        <button class="btn btn-link text-secondary p-0 d-none d-md-inline" data-bs-toggle="collapse" data-bs-target="#sidebar"
+            aria-controls="sidebar" aria-label="Toggle sidebar">
+            <i class="bi bi-list fs-5"></i>
+        </button>
+        <button class="btn btn-link text-secondary p-0 d-md-none" data-bs-toggle="offcanvas" data-bs-target="#sidebarMobile"
+            aria-controls="sidebarMobile" aria-label="Toggle sidebar">
             <i class="bi bi-list fs-5"></i>
         </button>
         <a class="navbar-brand" href="#">

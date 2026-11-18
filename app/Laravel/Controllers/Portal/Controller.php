@@ -2,13 +2,11 @@
 
 namespace App\Laravel\Controllers\Portal;
 
-use App\Laravel\Controllers\Controller as BaseController;
+use App\Http\Controllers\Controller as BaseController;
 
-class Controller extends BaseController{
-
+class Controller extends BaseController
+{
     protected $data;
 
-    public function __construct(){
-
-    }
+    public function __construct() {}
 }

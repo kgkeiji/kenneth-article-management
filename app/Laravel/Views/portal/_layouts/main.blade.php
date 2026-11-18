@@ -9,6 +9,7 @@
 
 <body class="bg-body-tertiary d-flex flex-column min-vh-100">
     @include('portal._components.topbar')
+    @include('portal._components.notifications')
 
     <div class="d-flex flex-grow-1">
         @include('portal._components.sidebar')
