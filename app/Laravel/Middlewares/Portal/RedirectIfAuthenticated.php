@@ -35,7 +35,7 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next)
     {
-        if (auth('web')->check()) {
+        if (auth('admin')->check()) {
             return new RedirectResponse(route('portal.dashboard'));
         }
 

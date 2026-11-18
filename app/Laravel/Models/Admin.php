@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use PHPOpenSourceSaver\JWTAuth\Contracts\JWTSubject;
 
 
-class Admin extends Model
+class Admin extends Authenticatable
 {
     use SoftDeletes;
     /**

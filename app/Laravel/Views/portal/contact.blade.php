@@ -6,7 +6,7 @@
             <div class="container py-5 bg-light mt-5 mb-0 text-dark shadow rounded">
                 <h1 class="display-4 fw-bold mb-3 text-end">Contact Us</h1>
                 <p class="lead text-secondary text-end mb-4">
-                    You're running Laravel 12 with a custom structure and modern tooling.
+                    Manage, organize, and publish articles with ease.
                 </p>
                 <div class="container">
                     <!-- row -->

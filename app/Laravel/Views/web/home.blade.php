@@ -8,7 +8,7 @@
             <div class="col-md-6 py-5">
                 <h1 class="display-4 fw-bold mb-3">Article Management</h1>
                 <p class="lead mb-4">
-                    You're running Laravel 12 with a custom structure and modern tooling.
+                    Manage, organize, and publish articles with ease.
                 </p>
                 <div class="d-flex gap-2">
                     <a href="{{ route('web.about') }}" class="btn btn-primary btn-lg">

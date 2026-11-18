@@ -19,7 +19,7 @@ class Authenticate extends BaseMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, \Closure $next,$guard="api")
+    public function handle($request, \Closure $next, $guard = "api")
     {
 
         try {
@@ -30,7 +30,6 @@ class Authenticate extends BaseMiddleware
             }
 
             $user = auth($guard)->authenticate($token);
-
         } catch (TokenExpiredException $e) {
             return $this->respond('jwt.expired', 'token_expired', $e->getStatusCode(), [$e]);
         } catch (JWTException $e) {
@@ -69,7 +68,7 @@ class Authenticate extends BaseMiddleware
         $response = array();
 
         switch ($error) {
-            case 'token_not_provided' :
+            case 'token_not_provided':
                 $response = [
                     'msg' => "Token not provided",
                     'status' => FALSE,
@@ -77,7 +76,7 @@ class Authenticate extends BaseMiddleware
                     'hint' => "You can obtain a token in a successful login/register request.",
                 ];
                 break;
-            case 'token_expired' :
+            case 'token_expired':
                 $response = [
                     'msg' => "Your session has expired.",
                     'status' => FALSE,
@@ -85,7 +84,7 @@ class Authenticate extends BaseMiddleware
                     'hint' => "You must try refreshing your token. If this error still occurs, you must re-login.",
                 ];
                 break;
-            case 'token_invalid' :
+            case 'token_invalid':
                 $response = [
                     'msg' => "Invalid token",
                     'status' => FALSE,
@@ -93,7 +92,7 @@ class Authenticate extends BaseMiddleware
                     'hint' => "You can obtain a token in a successful login/register request.",
                 ];
                 break;
-            case 'user_not_found' :
+            case 'user_not_found':
                 $response = [
                     'msg' => "Invalid acccount access.",
                     'status' => FALSE,

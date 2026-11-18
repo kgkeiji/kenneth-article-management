@@ -33,7 +33,7 @@
                         <div class="d-flex align-items-center justify-content-center h-100">
                             <div class="col-10 col-xl-8 py-3">
                                 <img class="img-fluid rounded mb-4" loading="lazy"
-                                    src="{{ asset('assets/images/logo.png') }}" width="100" alt="TheArticle Logo">
+                                    src="{{ asset('assets/icons/logo.png') }}" width="100" alt="TheArticle Logo">
                                 <hr class="border-primary-subtle mb-4">
                                 <h2 class="h1 mb-4">Turning Ideas Into Digital Experiences.</h2>
                                 <p class="lead m-0 fs-6 fs-md-3">A platform where ideas become stories, creativity finds

@@ -35,7 +35,7 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (!auth('web')->check()) {
+        if (!auth('admin')->check()) {
             session()->flash('notification-status', "warning");
             session()->flash('notification-msg', "Unauthorized access. Please login first.");
             return redirect()->route('portal.auth.login');

@@ -5,6 +5,16 @@
         min-height: 100vh !important;
     }
 
+    footer {
+        .footer-img {
+            height: 20px;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
     .active {
         color: blue !important;
     }
