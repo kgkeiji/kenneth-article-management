@@ -27,7 +27,7 @@
                 <div class="fw-semibold text-dark">Kenneth Piangco</div>
             </div>
 
-            <a href="{{ route('portal.logout') }}"
+            <a href="{{ route('portal.logout') }}" id="logoutBtn"
                 class="btn btn-outline-danger btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
                 <i class="bi bi-box-arrow-right"></i>
                 Logout
@@ -67,3 +67,29 @@
 
     </aside>
 </div>
+@section('page-scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            logoutBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'Do you want to log out?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, log out!',
+                    cancelButtonText: 'Cancel'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = logoutBtn.href;
+                    }
+                });
+            });
+        });
+    </script>
+@endsection
