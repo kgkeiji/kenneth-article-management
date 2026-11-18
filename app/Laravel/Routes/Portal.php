@@ -18,6 +18,10 @@ Route::group([
         Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);;
         Route::get('about', ['as' => 'about', 'uses' => 'MainController@about']);;
         Route::get('contact', ['as' => 'contact', 'uses' => 'MainController@contact']);;
+
+        Route::get('logout', ['as' => 'logout', 'uses' => 'AuthenticationController@logout']);;
+
+        include_once app_path("Laravel/Routes/Portal/AccountManagement.php");
     });
 
     // Route::group(['middleware' => "portal.auth"], function () {

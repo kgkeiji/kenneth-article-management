@@ -12,13 +12,14 @@ class Handler extends ExceptionHandler
     use ResponseGenerator;
     public static function registerInExceptions(Exceptions $exceptions): void
     {
-        $exceptions->renderable(function (Throwable $exception, $request){
+        $exceptions->renderable(function (Throwable $exception, $request) {
             $api_response = false;
-            if(in_array(strtolower($request->segment(1)), ["api","wh"]) == "api" OR $request->header('host') == env("API_URL","") ){
+            if (in_array(strtolower($request->segment(1)), ["api", "wh"]) == "api" or $request->header('host') == env("API_URL", "")) {
                 $api_response = true;
             }
 
-            switch(get_class($exception)){
+            dd($exception);
+            switch (get_class($exception)) {
                 case "libphonenumber\NumberParseException":
                     $response = array(
                         "msg" => "Invalid Phone number format.",
@@ -147,33 +148,32 @@ class Handler extends ExceptionHandler
                     $status_code = 503;
                     break;
                 default:
-                    if (get_class($exception) == "Symfony\Component\HttpKernel\Exception\HttpException"){
+                    if (get_class($exception) == "Symfony\Component\HttpKernel\Exception\HttpException") {
 
-                        if($api_response) {
+                        if ($api_response) {
                             $response = array(
                                 "msg" => "Platform currently under maintenance.",
                                 "status" => FALSE,
                                 'status_code' => "MAINTENANCE_MODE"
                             );
 
-                            if($request->input('hint')){
+                            if ($request->input('hint')) {
                                 $response['hint'] = $exception->getMessage();
                             }
                             return response()->json(self::api_response($response), 503);
                         }
 
                         return response()->view("custom::errors.503", [], 503);
-                    }else{
+                    } else {
                         dd($exception);
                     }
-
             }
 
             callback:
-            if($api_response){
-                $response['code'] = "#".$exception->getLine();
+            if ($api_response) {
+                $response['code'] = "#" . $exception->getLine();
 
-                if($request->input('hint')){
+                if ($request->input('hint')) {
                     $response['hint'] = $exception->getMessage();
                 }
                 return response()->json(self::api_response($response), $status_code);
@@ -181,7 +181,7 @@ class Handler extends ExceptionHandler
 
             session()->flash('notification-status', "warning");
             session()->flash('notification-msg', $response['msg']);
-            if(!in_array($status_code,["404","500"])){
+            if (!in_array($status_code, ["404", "500"])) {
                 return redirect()->back();
             }
 
@@ -194,14 +194,11 @@ class Handler extends ExceptionHandler
             if (view()->exists("custom::errors.error")) {
                 return response()->view("custom::errors.error", [], $status);
             }
-
         });
 
 
 
-            // Add all other renderable/reportable logic from your old Handler render method here
+        // Add all other renderable/reportable logic from your old Handler render method here
         // For fallback or default, you can catch Throwable
     }
-
 }
-

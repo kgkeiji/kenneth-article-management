@@ -8,5 +8,5 @@ Route::group(['as' => 'auth.', 'middleware' => 'portal.guest'], function () {
 
     Route::get('register', ['as' => 'register', 'uses' => 'AuthenticationController@register']);
     Route::post('register', ['uses' => 'AuthenticationController@store']);
-    Route::post('logout', ['as' => 'logout', 'uses' => 'AuthenticationController@logout']);
+    // Route::post('logout', ['as' => 'logout', 'uses' => 'AuthenticationController@logout']);
 });

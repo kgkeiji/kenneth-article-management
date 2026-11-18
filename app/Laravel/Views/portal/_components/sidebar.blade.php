@@ -10,6 +10,9 @@
                 <ul class="nav flex-column ps-4 ms-2">
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.dashboard') }}">Dashboard</a>
                     </li>
+                    <li><a class="nav-link link-primary py-1 small"
+                            href="{{ route('portal.account-management.index') }}">Account Management</a>
+                    </li>
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.home') }}">Home</a></li>
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.about') }}">About</a></li>
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.contact') }}">Contact</a>
@@ -21,12 +24,9 @@
         <div class="mt-auto px-3 py-3 small text-body-secondary">
             Logged in as:
             <div class="text-dark">Kenneth Piangco</div>
-            <form action="{{ route('portal.auth.logout') }}" method="POST">
-                @csrf
-                <div class="logout">
-                    <button type="submit">Logout</button>
-                </div>
-            </form>
+            <div class="logout">
+                <a href="{{ route('portal.logout') }}">Logout</a>
+            </div>
         </div>
 
     </aside>
@@ -43,6 +43,9 @@
             <li class="nav-item">
                 <ul class="nav flex-column ps-4 ms-2">
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.dashboard') }}">Dashboard</a>
+                    </li>
+                    <li><a class="nav-link link-primary py-1 small"
+                            href="{{ route('portal.account-management.index') }}">Account Management</a>
                     </li>
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.home') }}">Home</a></li>
                     <li><a class="nav-link link-primary py-1 small" href="{{ route('portal.about') }}">About</a></li>

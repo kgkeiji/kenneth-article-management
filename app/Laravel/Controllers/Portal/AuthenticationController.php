@@ -68,7 +68,7 @@ class AuthenticationController extends Controller
 
     public function logout(PageRequest $request)
     {
-        Auth::guard('admin')->logout();
+        Auth('admin')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

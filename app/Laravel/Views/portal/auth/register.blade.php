@@ -45,25 +45,25 @@
                                         <label for="name" class="form-label">Name <span
                                                 class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="name" id="name"
-                                            placeholder="John Doe" required>
+                                            placeholder="John Doe">
                                     </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
                                         <input type="email" class="form-control" name="email" id="email"
-                                            placeholder="name@example.com" required>
+                                            placeholder="name@example.com">
                                     </div>
                                     <div class="col-12">
                                         <label for="password" class="form-label">Password <span
                                                 class="text-danger">*</span></label>
                                         <input type="password" class="form-control" name="password" id="password"
-                                            value="" required>
+                                            value="">
                                     </div>
                                     <div class="col-12">
                                         <label for="confirm_password" class="form-label">Confirm Password <span
                                                 class="text-danger">*</span></label>
                                         <input type="password" class="form-control" name="confirm_password"
-                                            id="confirm_password" value="" required>
+                                            id="confirm_password" value="">
                                     </div>
                                     <div class="col-12">
                                         <div class="d-grid">
