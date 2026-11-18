@@ -7,13 +7,14 @@
     @yield('page-styles')
 </head>
 
-<body class="bg-body-tertiary d-flex flex-column min-vh-100">
-    @include('portal._components.topbar')
-    @include('portal._components.notifications')
+<body class="bg-body-tertiary d-flex flex-column vh-100 overflow-hidden">
 
-    <div class="d-flex flex-grow-1">
+    @include('portal._components.topbar')
+
+    <div class="d-flex flex-grow-1 overflow-hidden">
         @include('portal._components.sidebar')
-        <div class="flex-grow-1 d-flex flex-column" style="min-width:0">
+
+        <div class="flex-grow-1 d-flex flex-column overflow-y-auto" style="min-width: 0;">
             @yield('content')
             @include('portal._components.footer')
         </div>
@@ -21,6 +22,7 @@
 
     @include('portal._components.scripts')
     @yield('page-scripts')
+
 </body>
 
 </html>

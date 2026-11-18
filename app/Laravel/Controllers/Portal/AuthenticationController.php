@@ -2,11 +2,12 @@
 
 namespace App\Laravel\Controllers\Portal;
 
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use App\Laravel\Requests\PageRequest;
 use PhpParser\Node\Stmt\TryCatch;
 use App\Laravel\Models\Admin;
-use Illuminate\Support\Facades\Auth;
-// use Illuminate\Support\Facades\DB;
 use DB;
 
 
@@ -63,5 +64,16 @@ class AuthenticationController extends Controller
             session()->flash('notification-msg', "Server failed. Please try again later.");
             return redirect()->back();
         }
+    }
+
+    public function logout(PageRequest $request)
+    {
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        session()->flash('notification-status', "success");
+        session()->flash('notification-msg', "You have been signed out.");
+        return redirect()->route('portal.auth.login');
     }
 }

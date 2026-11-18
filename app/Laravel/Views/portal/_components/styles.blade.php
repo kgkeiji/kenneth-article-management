@@ -5,6 +5,16 @@
         padding: 0;
     }
 
+    footer {
+        .footer-img {
+            height: 20px;
+        }
+
+        p {
+            margin: 0 !important;
+        }
+    }
+
     aside {
         width: 225px;
     }

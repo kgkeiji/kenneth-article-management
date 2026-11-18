@@ -5,6 +5,7 @@
 
         <!-- Main content -->
         <main class="flex-grow-1 p-4 p-lg-5" style="min-width:0">
+            @include('portal._components.notifications')
 
             <!-- Page Header -->
             <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-4">

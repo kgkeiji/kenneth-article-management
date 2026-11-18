@@ -15,6 +15,9 @@ Route::group([
 
     Route::group(['middleware' => "portal.auth"], function () {
         Route::get('/', ['as' => 'dashboard', 'uses' => 'MainController@index']);
+        Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);;
+        Route::get('about', ['as' => 'about', 'uses' => 'MainController@about']);;
+        Route::get('contact', ['as' => 'contact', 'uses' => 'MainController@contact']);;
     });
 
     // Route::group(['middleware' => "portal.auth"], function () {
@@ -26,6 +29,4 @@ Route::group([
     // Route::get('home', ['as' => 'home', 'uses' => 'MainController@home']);;
     // Route::get('login', ['as' => 'login', 'uses' => 'MainController@login']);;
     // Route::get('register', ['as' => 'register', 'uses' => 'MainController@register']);;
-    // Route::get('about', ['as' => 'about', 'uses' => 'MainController@about']);;
-    // Route::get('contact', ['as' => 'contact', 'uses' => 'MainController@contact']);;
 });
