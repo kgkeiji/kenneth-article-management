@@ -21,12 +21,17 @@
             </li>
         </ul>
 
-        <div class="mt-auto px-3 py-3 small text-body-secondary">
-            Logged in as:
-            <div class="text-dark">Kenneth Piangco</div>
-            <div class="logout">
-                <a href="{{ route('portal.logout') }}">Logout</a>
+        <div class="mt-auto px-3 py-3 small text-body-secondary border-top">
+            <div class="mb-3">
+                <div class="text-body-secondary mb-1">Logged in as</div>
+                <div class="fw-semibold text-dark">Kenneth Piangco</div>
             </div>
+
+            <a href="{{ route('portal.logout') }}"
+                class="btn btn-outline-danger btn-sm w-100 d-flex align-items-center justify-content-center gap-2">
+                <i class="bi bi-box-arrow-right"></i>
+                Logout
+            </a>
         </div>
 
     </aside>
