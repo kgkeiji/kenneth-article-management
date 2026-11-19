@@ -4,6 +4,8 @@ namespace App\Laravel\Controllers\Portal;
 
 use App\Laravel\Requests\PageRequest;
 use App\Laravel\Models\Admin;
+use App\Laravel\Requests\Portal\AdminAccountRequest;
+// use Illuminate\Support\Facades\DB;
 use DB;
 
 
@@ -37,7 +39,7 @@ class AccountManagementController extends Controller
     }
 
     // store
-    public function store(PageRequest $request)
+    public function store(AdminAccountRequest $request)
     {
         DB::beginTransaction();
 

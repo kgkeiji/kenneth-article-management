@@ -5,7 +5,7 @@ namespace App\Exceptions;
 use App\Laravel\Traits\ResponseGenerator;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Foundation\Configuration\Exceptions;
-use Throwable;
+use PHPUnit\Event\Code\Throwable;
 
 class Handler extends ExceptionHandler
 {
@@ -18,7 +18,8 @@ class Handler extends ExceptionHandler
                 $api_response = true;
             }
 
-            dd($exception);
+            // dd($exception); 
+
             switch (get_class($exception)) {
                 case "libphonenumber\NumberParseException":
                     $response = array(

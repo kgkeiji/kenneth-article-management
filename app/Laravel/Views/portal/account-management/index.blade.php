@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="card-header">
-                        <a href="{{ route('portal.account-management.create') }}">Sir Mark</a>
+                    <div class="card-header d-flex justify-content-end">
+                        <a href="{{ route('portal.account-management.create') }}" class="btn btn-primary">+ Create Account</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-striped">

@@ -11,25 +11,50 @@
                     <form method="POST" action="">
                         @csrf
                         <div class="row gy-2 gy-md-3 overflow-hidden">
+                            {{-- name --}}
                             <div class="col-12">
                                 <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="name" id="name"
                                     placeholder="John Doe">
+                                @if ($errors->first('name'))
+                                    <div class="text-left">
+                                        <small class="text-danger">
+                                            {{ $errors->first('name') }}
+                                        </small>
+                                    </div>
+                                @endif
                             </div>
+                            {{-- email --}}
                             <div class="col-12">
                                 <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="name@example.com">
+                                <input class="form-control" name="email" id="email" placeholder="name@example.com">
+                                @if ($errors->first('email'))
+                                    <div class="text-left">
+                                        <small class="text-danger">
+                                            {{ $errors->first('email') }}
+                                        </small>
+                                    </div>
+                                @endif
                             </div>
+                            {{-- password --}}
                             <div class="col-12">
                                 <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
                                 <input type="password" class="form-control" name="password" id="password" value="">
+
                             </div>
+                            {{-- confirm password --}}
                             <div class="col-12">
                                 <label for="confirm_password" class="form-label">Confirm Password <span
                                         class="text-danger">*</span></label>
                                 <input type="password" class="form-control" name="confirm_password" id="confirm_password"
                                     value="">
+                                @if ($errors->first('password'))
+                                    <div class="text-left">
+                                        <small class="text-danger">
+                                            {{ $errors->first('password') }}
+                                        </small>
+                                    </div>
+                                @endif
                             </div>
                             <div class="col-12">
                                 <div class="d-grid">

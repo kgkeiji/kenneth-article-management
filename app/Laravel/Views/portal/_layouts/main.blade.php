@@ -15,6 +15,7 @@
         @include('portal._components.sidebar')
 
         <div class="flex-grow-1 d-flex flex-column overflow-y-auto" style="min-width: 0;">
+            @include('portal._components.notifications')
             @yield('content')
             @include('portal._components.footer')
         </div>
